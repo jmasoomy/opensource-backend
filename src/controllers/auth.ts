@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { users, User } from "../infrastructure/authStore";
 
-const secretKey = "your_secret_key";
+const secretKey = "jasim_secret";
 
 export const registerUser = (req: Request, res: Response) => {
   const { username, password, role } = req.body;
