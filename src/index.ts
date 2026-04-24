@@ -1,5 +1,6 @@
 import express, {Request, Response } from "express";
 import postsRoutes from "./ports/rest/routes/posts";
+import authRoutes from "./ports/rest/routes/auth";
 
 const app = express();
 const PORT = 3000;
@@ -19,6 +20,7 @@ app.get("/health", (req: Request, res: Response) => {
 });
 
 app.use("/posts", postsRoutes);
+app.use("/auth", authRoutes);
 
 app.listen(PORT, () => {
     console.log('Server is running on http://localhost:3000');
